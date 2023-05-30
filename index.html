@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+.container{
+    display: flex;
+}
+
+.card{
+    padding: 10px;
+    margin: 5px;
+    width: 200px;
+    box-shadow: 15px 20px 25px black;
+}
+
+h1{
+    text-align: center;
+}
+
+img{
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    display: block;
+}
+    </style>
+</head>
+<body>
+    
+<img src="" alt="">
+
+<script>
+let user = parseInt(prompt("how mamy cards do you want to display?"));
+for (let a = 0; a < user; a++){
+    let produts = [{
+        name: prompt("enter your product name"),
+        model: prompt("enter your model name"),
+        price: parseInt(prompt("enter your price")),
+        imageUrl: prompt("enter your image url"),
+
+    }];
+
+document.write("<div class = 'container'>");
+    produts.map((element, index) => {
+document.write("<div class='cards'>");
+    document.write("<h1>" + "Name:" + element.name + "<br>" + "Model:" + element.model + "<br>" + "price:" + element.price + "</h1>");
+    document.write(`<img src="${element.imageUrl}" alt="">`);
+    document.write("</div>");
+    });
+    document.write("</div>");
+    document.write(a);
+}
+</script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
